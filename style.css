@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #0F0F0F;
+  color: #E5E5E5;
+  font-family: Hiragino Mincho ProN W3;
+}
+
+.no-wrap{
+  display: inline-block;
+}
+
+.toggle_btn {
+  display : block;
+  position: fixed;
+  z-index : 10;
+  right : 5%;
+  top   : 30px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.toggle_btn span {
+  display : block;
+  position: absolute;
+  width   : 48px;
+  height  : 1px ;
+  left    : 6px;
+  background : #E5E5E5;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.toggle_btn span:nth-child(1) {
+  top: 10px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 20px;
+}
+.toggle_btn span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビゲーション */
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #0F0F0F;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+
+.open nav{
+  right: 0;
+  opacity: 1;
+}
+nav .global-Menu {
+  padding: 25px;
+}
+nav .global-Menu ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .global-Menu ul li {
+  position: relative;
+  margin: 0;
+}
+nav .global-Menu ul li a {
+  border-bottom: solid 1px #0f0f0f;
+  display: block;
+  color: #E5E5E5;
+  font-family: Didot;
+  font-size: 24px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .global-Menu ul li a:hover {
+  border-bottom: solid 1px #691515;
+  box-sizing: border-box;
+}
+
+.open .toggle_btn {
+  right: 47px;
+  z-index: 10;
+}
+.open .toggle_btn span:nth-child(1) {
+  transform: translate(0, 10px) rotate(-45deg);
+  animation: unset;
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+  animation: unset;
+}
+.open .toggle_btn span:nth-child(3) {
+  transform: translate(0, -10px) rotate(45deg);
+  animation: unset;
+}
+
+
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* メインビジュアル */
+
+.mobile-mainvisual{
+  display: none;
+}
+
+.main-visual-img{
+  position: relative;
+  width: 100%;
+  height: 93vh;
+  object-fit: cover;
+}
+
+img.main-visual-title{
+  position: fixed;
+  top: 30px;
+  left: 5%;
+}
+
+.main-visual h1{
+  width: 100%;
+  font-family: Didot;
+  font-size: 104px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+.scrolldown1{
+  /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  left:50%;
+  bottom:10px;
+  /*全体の高さ*/
+  height:50px;
+}
+
+.scrolldown1 p{
+  transform: translate(-50%,-50%);
+  padding-bottom: 18px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+  /*描画位置*/
+  position: absolute;
+  left:-15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: #eee;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #eee;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+0%{
+  height:0;
+  top:0;
+  opacity: 0;
+}
+30%{
+  height:30px;
+  opacity: 1;
+}
+100%{
+  height:0;
+  top:50px;
+  opacity: 0;
+}
+}
+
+.main-visual h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color:#e5e5e5;
+  text-shadow: 0 0 15px #666;
+  text-align: center;
+}
+
+img.main-visual-title {
+  position: fixed;
+}
+
+.main-visual{
+  width:100%;
+  height: 97vh;
+  position: relative;
+}
+
+.main-visual:before{
+  content: '';
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height: 100vh;
+  /*背景画像設定*/
+  background: url("images/topvisual.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#container{
+  position: relative;
+  z-index:1;
+  background: #0f0f0f;
+  padding: 2rem 0;
+}
+
+/* 紹介文 */
+
+.introduction{
+  text-align: center;
+  margin: 8rem 1rem;
+  font-size: 20px;
+}
+
+p.introduction-read{
+  margin-bottom: 27px;
+  font-family: Hiragino Mincho ProN W6;
+}
+
+.main-visual-scroll{
+  display: block;
+  width: 50%;
+}
+
+.main-visual-scroll span{
+  display: block;
+  width: 0.7px;
+  height: 250px;
+  background-color: #E5E5E5;
+}
+
+/* 各見出し */
+
+.concept, .news, .product{
+  text-align: center;
+  margin-bottom: 7.6rem;
+}
+
+.concept-title, .news-title, .product-title{
+  font-family: Didot;
+  font-size: 64px;
+  margin-bottom: 9px;
+}
+
+.concept-subtitle, .news-subtitle, .product-subtitle{
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.title-span{
+  color: #8C1B1B;
+}
+
+/* コンセプト */
+
+.concept-text{
+  margin: 40px;
+}
+
+/* ニュース */
+
+.news-list-div{
+  display: flex;
+  justify-content: center;
+}
+
+.news-list-div ul{
+  width: 75%;
+}
+
+.news-list1, .news-list2{
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-top: 0.7px solid #e5e5e5;
+}
+
+.news-list2{
+  border-bottom: 0.7px solid #e5e5e5;
+}
+
+.news-date{
+  margin-right: 2.75rem;
+}
+
+/* プロダクト */
+
+.product-name-list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 110px;
+}
+
+.product-name-list li{
+  display: flex;
+  margin: 0 1.5rem;
+}
+
+.Name p{
+  margin-right: 10px;
+  color: #8C1B1B;
+}
+
+.Name h3{
+  font-family: Didot;
+  font-size: 34px;
+  padding-bottom: 8px;
+  border-bottom: 0.7px solid #E5E5E5;
+}
+
+.product-list li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.product-img{
+  width: 30%;
+}
+
+.product-name{
+  width: 30%;
+  text-align: left;
+}
+
+.product-name h2{
+  font-family: Didot;
+  font-size: 54px;
+}
+
+.product-name p{
+  font-family: Hiragino Mincho ProN W6;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.order-button{
+  text-align: end;
+}
+
+.order-button a{
+  position: relative;
+  text-decoration: none;
+  color: #E5E5E5;
+  padding: 10px 31px;
+  border: 0.7px solid #e5e5e5;
+}
+
+.order-button a::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -18%;
+  transform: translateY(-50%);
+  width: 35%;
+  height: 0.5px;
+  background-color: #E5E5E5;
+  transition: 0.3s;
+}
+
+.order-button a:hover::after{
+  transform: translateX(5px);
+}
+
+.mobile-order-button{
+  display: none;
+}
+
+/* 下部写真 */
+
+.picture2{
+  margin: 10px 0;
+}
+
+img.desktop-picture{
+  width: 100%;
+  height: 93vh;
+  object-fit: cover;
+  object-position: 0 70%;
+}
+
+img.mobile-picture{
+  display: none;
+}
+
+/* フッター */
+
+.footer{
+  margin: 120px 0;
+}
+
+.footer-title{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.footer-content, .footer-snsicon{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.footer-content li{
+  margin: 0 1.5rem;
+}
+
+.footer-snsicon li{
+  margin: 0 0.5rem;
+}
+
+.copy-right{
+  text-align: center;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ナビゲーション */
+
+nav{
+	width: 100%;
+}
+
+.toggle_btn span{
+	width: 31px;
+}
+
+/* メインビジュアル */
+
+.main-visual h1{
+	font-size: 77px;
+}
+
+img.main-visual-title{
+	width: 30%;
+}
+
+/* 紹介文 */
+
+.introduction{
+	font-size: 15px;
+}
+
+p.introduction-read{
+	font-size: 18px;
+}
+
+/* ニュース */
+.news-list-div{
+	font-size: 13px;
+}
+
+.news-list-div p{
+	text-align: start;
+}
+
+/* プロダクト */
+
+.product-name-list{
+	display: block;
+}
+
+li.Name{
+	justify-content: center;
+	margin-bottom: 1.3rem;
+}
+
+.product-list li{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 3%;
+}
+
+.product-img{
+	width: 50%;
+}
+
+.product-img img{
+	width: 75%;
+	margin-left: 25%;
+}
+
+.product-name{
+	width: 50%;
+}
+
+.product-name-list{
+	margin-bottom: 10%;
+}
+
+.product-name h2{
+	font-size: 40px;
+	margin-left: 13%;
+}
+
+.product-name p{
+	margin-left: 17%;
+}
+
+.order-button{
+	display: none;
+}
+
+.mobile-order-button{
+	display: block;
+	margin-bottom: 20%;
+}
+
+.mobile-order-button a{
+	position: relative;
+	text-decoration: none;
+	color: #e5e5e5;
+	border: 0.5px solid #e5e5e5;
+	padding: 10px 31px;
+}
+
+.mobile-order-button a::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -18%;
+	transform: translateY(-50%);
+	width: 35%;
+	height: 0.5px;
+	background-color: #E5E5E5;
+	transition: 0.3s;
+}
+
+.mobile-order-button a:hover::after{
+	transform: translateX(5px);
+}
+
+/* 下部写真 */
+
+img.desktop-picture{
+	display: none;
+}
+
+img.mobile-picture{
+	display: block;
+	width: 100%;
+}
+
+/* フッター */
+
+.footer-content{
+	font-size: 15px;
+	display: block;
+	text-align: center;
+}
+
+.copy-right{
+	font-size: 13px;
+}
