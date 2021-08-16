@@ -47,6 +47,7 @@ p.introduction-read{
 
 .product-name-list{
 	display: block;
+	margin-bottom: 11vh;
 }
 
 li.Name{
@@ -64,8 +65,8 @@ li.Name{
 #vanity, #haruka, #azisai, #hero{
 	display: grid;
 	justify-content: center;
-	grid-template-rows: 120px 120px;
-	grid-template-columns: 150px 150px;
+	grid-template-rows: 40vw 45vw 41vw;
+	grid-template-columns: 40vw 40vw;
 	margin-bottom: 10%;
 }
 
@@ -183,3 +184,4 @@ img.mobile-picture{
 .copy-right{
 	font-size: 13px;
 }
+
