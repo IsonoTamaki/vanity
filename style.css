@@ -330,6 +330,11 @@ p.introduction-read{
   margin: 0 1.5rem;
 }
 
+.product-name-list a{
+  text-decoration: none;
+  color: #e5e5e5;
+}
+
 .Name p{
   margin-right: 10px;
   color: #8C1B1B;
@@ -356,6 +361,11 @@ p.introduction-read{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.v-four-mobile, .h-four-mobile,
+.a-four-mobile, .e-four-mobile{
+  display: none;
 }
 
 .v-one h2, .h-two h2, .a-one h2, .e-two h2{
