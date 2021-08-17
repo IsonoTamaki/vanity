@@ -7,8 +7,8 @@
 #vanity, #haruka, #azisai, #hero{
 	display: grid;
 	justify-content: center;
-	grid-template-rows: 300px 370px 320px;
-	grid-template-columns: 350px 350px;
+	grid-template-rows: 40vw 45vw 41vw;
+	grid-template-columns: 47vw 35vw;
 	margin-bottom: 10%;
 }
 
@@ -95,4 +95,15 @@
 .order-button{
 	bottom: 5vh;
 	right: 4vh;
+}
+
+img.desktop-picture{
+	display: none;
+}
+
+img.mobile-picture{
+	display: block;
+	width: 100%;
+	height: 40vh;
+	object-fit: cover;
 }
