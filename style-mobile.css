@@ -66,7 +66,7 @@ li.Name{
 	display: grid;
 	justify-content: center;
 	grid-template-rows: 40vw 45vw 41vw;
-	grid-template-columns: 40vw 40vw;
+	grid-template-columns: 47vw 35vw;
 	margin-bottom: 10%;
 }
 
@@ -78,13 +78,12 @@ li.Name{
 .v-one p, .h-two p, .a-one p, .e-two p{
 	font-family: Hiragino Mincho ProN W3;
 	font-size: 11px;
-	/* margin-bottom: 40px; */
 }
 
 .v-one{
 	grid-row: 1;
 	grid-column: 1;
-	padding: 0.5rem 0.7rem;
+	padding: 0.7rem;
 	background-color: #563D66;
 
 	display: flex;
@@ -96,7 +95,7 @@ li.Name{
 .a-one{
 	grid-row: 1;
 	grid-column: 1;
-	padding: 0.5rem 0.7rem;
+	padding: 0.7rem;
 	background-color: #8B9CA5;
 
 	display: flex;
@@ -108,7 +107,7 @@ li.Name{
 .h-two{
 	grid-row: 1;
 	grid-column: 1;
-	padding: 0.5rem 0.7rem;
+	padding: 0.7rem;
 	background-color: #5A6D55;
 
 	display: flex;
@@ -120,7 +119,7 @@ li.Name{
 .e-two{
 	grid-row: 1;
 	grid-column: 1;
-	padding: 0.5rem 0.7rem;
+	padding: 0.7rem;
 	background-color: #9C7167;
 
 	display: flex;
@@ -144,8 +143,8 @@ li.Name{
 }
 
 .order-button{
-	bottom: 2vh;
-	right: 1.3vh;
+	bottom: 2.5vh;
+	right: 1.8vh;
 }
 
 .order-button a{
@@ -184,4 +183,3 @@ img.mobile-picture{
 .copy-right{
 	font-size: 13px;
 }
-
